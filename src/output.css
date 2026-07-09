@@ -485,6 +485,9 @@
   .h-\[0px\] {
     height: 0px;
   }
+  .h-\[00px\] {
+    height: 00px;
+  }
   .h-\[10px\] {
     height: 10px;
   }
