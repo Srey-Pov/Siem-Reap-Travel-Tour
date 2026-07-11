@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Siem Reap Tour</title>
+    <link rel="stylesheet" href="../src/output.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        .serif-font {
+            font-family: 'Playfair Display', serif;
+        }
+    </style>
+</head>
+<body class="bg-[#fcfbf7] text-gray-800 m-0 p-0">
+    <header class="relative min-h-[60vh] md:h-[65vh] bg-cover bg-center flex flex-col justify-between text-white"
+    style="background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)), url('../image/temple.png');">
+    <nav class="w-full flex items-center justify-between px-6 py-4 md:px-12 z-20">
+        <div class="flex items-center gap-3">
+            <img src="../image/logo.png" alt="Siem Reap Tour Logo" class="w-10 h-10 object-contain mix-blend-multiply filter brightness-110">
+            <span class="font-serif tracking-wider text-xs uppercase">Siem Reap Tour</span>
+        </div>
+        <div class="hidden md:flex items-center gap-6 text-xs font-medium tracking-wide text-white/90">
+            <a href="#" class="hover:text-amber-400 transition-colors">Home</a>
+            <a href="#" class="hover:text-amber-400 transition-colors">About</a>
+            <a href="#" class="hover:text-amber-400 transition-colors">Contact</a>
+            <a href="#" class="hover:text-amber-400 transition-colors">Sign Up</a>
+            <button class="bg-[#f25c54] hover:bg-[#df4e46] text-white px-5 py-1.5 rounded-full transition-all text-xs font-semibold cursor-pointer">
+                Log in
+            </button>
+            <button class="text-sm text-white/80 hover:text-amber-400 cursor-pointer"><i class="fa-solid fa-moon"></i></button>
+        </div>
+        <div class="md:hidden text-lg text-white cursor-pointer"><i class="fa-solid fa-bars"></i></div>
+    </nav>
+    <div class="absolute left-6 top-1/2 -translate-y-1/2 hidden lg:flex flex-col items-center gap-4 text-white/80 z-10">
+        <span class="rotate-90 tracking-widest text-[9px] uppercase whitespace-nowrap mb-6 translate-y-4">Follow me</span>
+        <div class="w-px h-10 bg-white/30 my-2"></div>
+        <a href="#" class="hover:text-amber-400 text-sm transition-colors"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#" class="hover:text-amber-400 text-sm transition-colors"><i class="fa-brands fa-twitter"></i></a>
+    </div>
+    <div class="flex-1 flex flex-col justify-center items-center text-center px-4">
+        <div class="flex items-center gap-3 text-[10px] md:text-xs tracking-[0.2em] uppercase mb-2 text-gray-300">
+            <span class="w-12 h-px bg-white/50"></span>
+            <span class="text-4xl font-serif">Join With Us Now</span>
+            <span class="w-12 h-px bg-white/50"></span>
+        </div>
+        <h1 class="serif-font text-xl md:text-xl font-medium  max-w-xl ">
+            It's a Great Time <br> to Start Living Now
+        </h1>
+    </div>
+</header>
+<main class="max-w-7xl mx-auto px-6 py-16 space-y-24">
+
+<!-- Mission -->
+ <section class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+    <div class="space-y-6">
+        <h2 class="text-lg font-bold uppercase border-b-2 border-gray-700 inline-block pb-1">
+            OUR MISSION
+        </h2>
+        <p class="text-gray-600 mt-4 leading-8 max-w-md">
+            To provide immersive, deeply authentic, and culturally respectful journeys through Cambodia's ancient landscapes, connecting travelers to local heritage.
+        </p>
+        <button class="bg-yellow-200 hover:bg-yellow-300 px-7 py-3 rounded-full">
+            View More
+        </button>
+    </div>
+    <div class="flex justify-center">
+        <img src="../image/mission.png" alt="Mission"
+        class="w-full max-w-md rounded-2xl shadow-lg object-cover">
+    </div>
+</section>
+
+<!-- Vision -->
+<section class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+    <div class="order-2 lg:order-1 flex justify-center">
+        <img src="../image/vision.png"
+             alt="Vision"
+             class="w-full max-w-md rounded-2xl shadow-lg object-cover">
+    </div>
+
+    <div class="space-y-6 order-1 lg:order-2">
+        <h2 class="text-lg font-bold uppercase border-b-2 border-gray-700 inline-block pb-1">
+            OUR VISION
+        </h2>
+
+        <p class="text-gray-600 mt-4 leading-8 max-w-md">
+            To become a trusted tourism platform that inspires people from around the world to explore Siem Reap and experience Cambodia's unique culture, history, and natural beauty through sustainable travel.
+        </p>
+        <button class="bg-yellow-200 hover:bg-yellow-300 px-7 py-3 rounded-full">
+            View More
+        </button>
+    </div>
+</section>
+    </main>
+</body>
+</html>
