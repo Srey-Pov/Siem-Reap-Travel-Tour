@@ -4,12 +4,7 @@
     "@tailwindcss/vite": "^4.3.2",
     "tailwindcss": "^4.3.2"
   },
-<<<<<<< HEAD
    "scripts": {
     "test": "npx @tailwindcss/cli -i ./src/input.css -o ./src/output.css --watch"
-=======
-  "scripts": {
-    "dev": "npx @tailwindcss/cli -i ./src/input.css -o ./src/output.css --watch"
->>>>>>> 9c0752741ea2fab53fcb395223fedaa33f3049fe
   }
 }
