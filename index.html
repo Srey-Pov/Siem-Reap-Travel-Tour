@@ -76,7 +76,51 @@
       .social-dot:hover {
         transform: translateY(-3px);
       }
-    </style>
+ 
+  .bento {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr;
+    grid-template-rows: auto auto auto;
+    grid-template-areas:
+      "a c d"
+      "b c e"
+      "f g g";
+    gap: 1rem;
+  }
+  @media (max-width: 767px) {
+    .bento {
+      grid-template-columns: 1fr;
+      grid-template-areas:
+        "a"
+        "b"
+        "c"
+        "d"
+        "e"
+        "f"
+        "g";
+    }
+  }
+ 
+  .area-a { grid-area: a; }
+  .area-b { grid-area: b; }
+  .area-c { grid-area: c; }
+  .area-d { grid-area: d; }
+  .area-e { grid-area: e; }
+  .area-f { grid-area: f; }
+  .area-g { grid-area: g; }
+ 
+  .click-pill {
+    background-color: #b7c4ab;
+  }
+ 
+  .img-zoom { overflow: hidden; }
+  .img-zoom img { transition: transform 0.5s ease; }
+  .img-zoom:hover img { transform: scale(1.08); }
+  .history-frame { transition: transform .4s ease, filter .4s ease; filter: grayscale(1); }
+  .history-frame:hover { transform: translateY(-6px) scale(1.02); filter: grayscale(0.15); }
+  .card-lift { transition: transform 0.3s ease, box-shadow 0.3s ease; }
+  .card-lift:hover { transform: translateY(-4px); box-shadow: 0 12px 24px rgba(31,77,58,0.12); }
+</style>
   </head>
   <body class="text-ink antialiased">
     <!-- navbar -->
@@ -449,15 +493,107 @@
         </div>
       </div>
     </section>
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
+
+
+    <!-- Explore Siem Reap -->
+  <section class="max-w-6xl mx-auto px-5 sm:px-8 py-12 sm:py-16">
+ 
+    <!-- Section header -->
+    <div class="flex items-center gap-6 mb-8 sm:mb-10">
+      <h2 class="font-display text-2xl sm:text-3xl font-semibold whitespace-nowrap">
+        Explore Siem Reap
+      </h2>
+      <div class="h-px bg-ink/30 flex-1"></div>
+    </div>
+ 
+    <!-- Bento grid -->
+    <div class="bento  p-4 sm:p-6">
+ 
+      <!-- A: Angkor Wat card -->
+      <div class="area-a card-lift bg-card rounded-2xl p-5 sm:p-6 flex flex-col justify-between min-h-[140px]">
+        <div class="flex justify-between items-start gap-3">
+          <h3 class="font-display text-lg sm:text-xl font-semibold">Angkor Wat</h3>
+          <button class="click-pill text-xs font-medium px-4 py-1.5 rounded-full shrink-0 hover:brightness-95 transition">Read more</button>
+        </div>
+        <p class="text-sm text-ink/70 leading-relaxed mt-3">
+          Discover the world's largest religious monument, a masterpiece of ancient engineering and spiritual artistry.
+        </p>
+      </div>
+ 
+      <!-- B: Travel-Focused card -->
+      <div class="area-b card-lift bg-card rounded-2xl p-5 sm:p-6 flex flex-col justify-between min-h-[140px]">
+        <div class="flex justify-between items-start gap-3">
+          <h3 class="font-display text-lg sm:text-xl font-semibold">Travel-Focused</h3>
+          <button class="click-pill text-xs font-medium px-4 py-1.5 rounded-full shrink-0 hover:brightness-95 transition">Read more</button>
+        </div>
+        <p class="text-sm text-ink/70 leading-relaxed mt-3">
+          Witness the stunning harmony of ancient architecture and nature.
+        </p>
+      </div>
+ 
+      <!-- C: Poster image, spans two rows -->
+      <div class="area-c img-zoom card-lift relative rounded-2xl overflow-hidden min-h-[220px] md:min-h-full">
+        <img src="./image/homepage-13.png"
+             alt="Siem Reap Cambodia Travel Guide"
+             class="absolute inset-0 w-full h-full object-cover" />
+        <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent"></div>
+      </div>
+ 
+      <!-- D: small image top right -->
+      <div class="area-d img-zoom card-lift relative rounded-2xl overflow-hidden min-h-[110px]">
+        <img src="./image/homepage-14.png"
+             alt="Best things to do in Siem Reap"
+             class="absolute inset-0 w-full h-full object-cover" />
+        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+      </div>
+ 
+      <!-- E: small image bottom right -->
+      <div class="area-e img-zoom card-lift relative rounded-2xl overflow-hidden min-h-[110px]">
+        <img src="./image/homepage-15.png"
+             alt="Siem Reap waterfall"
+             class="absolute inset-0 w-full h-full object-cover" />
+        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+      </div>
+ 
+      <!-- F: carved relief image bottom left -->
+      <div class="area-f img-zoom card-lift rounded-2xl overflow-hidden min-h-[130px]">
+        <img src="./image/homepage-16.png"
+             alt="Angkor Wat stone carvings"
+             class="w-full h-full object-cover" />
+      </div>
+ 
+      <!-- G: Elegant & Narrative card, spans bottom right -->
+      <div class="area-g card-lift bg-card rounded-2xl p-5 sm:p-6 flex flex-col justify-between min-h-[130px]">
+        <div class="flex justify-between items-start gap-3">
+          <h3 class="font-display text-lg sm:text-xl font-semibold">Elegant &amp; Narrative</h3>
+          <button class="click-pill text-xs font-medium px-4 py-1.5 rounded-full shrink-0 hover:brightness-95 transition">Read more</button>
+        </div>
+        <p class="text-sm text-ink/70 leading-relaxed mt-3">
+          A breathtaking testament to human genius, Angkor Wat stands as the heart of the ancient Khmer Empire.
+        </p>
+      </div>
+ 
+    </div>
+  </section>
+  
+<!-- TRACES OF HISTORY  -->
+<section class="bg-cream px-5 sm:px-10 md:px-16 py-16 sm:py-20">
+  <h2 class="font-display text-2xl sm:text-3xl mb-8">Traces of History</h2>
+  <div class="w-full h-px bg-ink/20 mb-10"></div>
+ 
+  <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6">
+    <div class="history-frame h-56 sm:h-64 md:h-72 overflow-hidden rounded-lg">
+      <img src="./image/homepage-18.png" class="w-full h-full object-cover" alt="Archival photo of Angkor courtyard">
+    </div>
+    <div class="history-frame h-56 sm:h-64 md:h-72 overflow-hidden rounded-lg">
+      <img src="./image/homepage-19.png" class="w-full h-full object-cover" alt="Archival photo of Apsara carvings">
+    </div>
+    <div class="history-frame h-56 sm:h-64 md:h-72 overflow-hidden rounded-lg">
+      <img src="./image/homepage-20.png" class="w-full h-full object-cover" alt="Archival photo of Angkor Wat entrance">
+    </div>
+  </div>
+</section>
+
     <!-- footer -->
     <footer
       id="footer"
